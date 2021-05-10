@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1060040360034",
+    "project_id": "rapid-242d7",
+    "storage_bucket": "rapid-242d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060040360034:android:8a0b98df8d320e41be113b",
+        "android_client_info": {
+          "package_name": "com.example.bowt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060040360034-1mp690cp4rfrmsvupgn3h73r0m2vcm6h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF7HXOq_Wg2bq8qIB2iIu33fTGayRmXcE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060040360034-1mp690cp4rfrmsvupgn3h73r0m2vcm6h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
