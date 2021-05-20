@@ -11,3 +11,5 @@ Color mSecondTextColor = Color(0xFFB98068);
 Color mSecondColor = Color(0xFFC28E79);
 
 Color mFacebookColor = Color(0xFF4277BC);
+
+const double kDefaultPadding = 20.0;

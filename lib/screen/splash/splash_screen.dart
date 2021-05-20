@@ -1,5 +1,6 @@
 import 'package:bowt/screen/home/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -8,7 +9,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  @override
   void initState() {
     var d = Duration(seconds: 5);
     Future.delayed(d,(){
@@ -25,33 +25,41 @@ class _SplashScreenState extends State<SplashScreen> {
 
     super.initState();
   }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      backgroundColor: Colors.grey.shade900,
+      body: SafeArea(
+        child: Column(
         children: <Widget>[
-          Center(
-            child: CircleAvatar(
-              radius: 100,
-              backgroundImage: AssetImage('assets/images/launch_image.png'),
-                ),
-          ),
           SizedBox(height: 150,),
+        Center(
+          child: SvgPicture.asset(
+              'assets/images/boat.svg',
+          height: 150,),
+        // child: CircleAvatar(
+        //   radius: 100,
+        //   backgroundImage: AssetImage('assets/images/launch_image.png'),
+        //     ),
+        ),
+        SizedBox(height: 80,),
+        Text(
+          'Rapid',
+        style: TextStyle(
+            fontSize: 45,
+            color: Colors.white,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 2,
+        ),
+        ),
+          SizedBox(height: 70),
           CircularProgressIndicator(
             backgroundColor: Colors.deepPurpleAccent,
           ),
-          // SizedBox(height: 50),
-          // Text(
-          //     'Rapid',
-          //   style: TextStyle(
-          //       fontSize: 40,
-          //       color: Colors.white,
-          //     fontWeight: FontWeight.w500,
-          //   ),
-          // ),
         ],
+      ),
       ),
       );
   }
 }
+

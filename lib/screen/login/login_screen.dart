@@ -5,6 +5,7 @@ import 'package:bowt/screen/login/widget/welcome_back.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -59,13 +60,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   ]),
                 ),
               ),
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: Center(child: Image.asset('assets/images/travel.png', height: 250,)),
+              SizedBox(height: 50,),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
                 ),
+                child: Center(child: SvgPicture.asset(
+                  'assets/images/travel.svg',
+                  height: 200,),),
               ),
             ],
           ),
@@ -77,8 +79,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
 AppBar buildAppBar(BuildContext context){
   return  AppBar(
-    backgroundColor: mBackgroundColor,
-    elevation: 0,
+    backgroundColor: Colors.white,
+    // elevation: 5,
     centerTitle: true,
     title: Text(
       'Rapid',

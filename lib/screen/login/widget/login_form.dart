@@ -1,4 +1,6 @@
+import 'package:bowt/screen/catalog/catalog_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 // import 'input_text_field.dart';
 
@@ -8,9 +10,15 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
-  String email ='';
-  String password = '';
+  String email;
+  String password;
   bool isVisible = false;
+
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  // checkAuthentification() async{
+  //   _auth.
+  // }
 
   // final GlobalKey<FormState> formKey;
 
@@ -82,8 +90,14 @@ class _LoginFormState extends State<LoginForm> {
                 ),
                 onPressed: (){
                   // Firebase implementation
-                  print(email);
-                  print(password);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context){
+                          return CatalogScreen();
+                        },
+                      )
+                  );
                 },
                 child: Container(
                   // width: double.infinity,
